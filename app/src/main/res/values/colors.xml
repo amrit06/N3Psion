@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FB8C00</color>
+    <color name="colorPrimaryDark">#EF6C00</color>
+    <color name="colorAccent">#FFD740</color>
+    <color name="errorColor">#BF360C</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="backgroundColour">#F8BBD0</color>
+    <color name="iconColor">#33691E</color>
+    <color name="black">#212121</color>
+    <color name="buttoncolor">#18FFFF</color>
+    <color name="pink">#9C27B0</color>
+    <color name="linkcolor">#01579B</color>
+</resources>

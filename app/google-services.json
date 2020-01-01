@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "483706003436",
+    "firebase_url": "https://n3psion.firebaseio.com",
+    "project_id": "n3psion",
+    "storage_bucket": "n3psion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483706003436:android:957aa2638742feb9e2eac9",
+        "android_client_info": {
+          "package_name": "com.example.n3psion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483706003436-u1i67nq7e3ktg61p6b8j971mmp3qv01n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.n3psion",
+            "certificate_hash": "bbf570e607ae9c91113a2cd27c15a20117dca9a0"
+          }
+        },
+        {
+          "client_id": "483706003436-amrblf40chdpdppbqi32dbri2mqd4vm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX1lOMzLnxlYFiWwMgPRmjTr20lr6rZNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483706003436-amrblf40chdpdppbqi32dbri2mqd4vm8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
