@@ -5,11 +5,11 @@
         />
 
     <corners
-        android:radius="20dp"
+        android:radius="10dp"
         />
     <stroke
-        android:width="5dp"
-        android:color="@color/pink"
+        android:width="3dp"
+        android:color="@color/whiteColor"
         />
 
 </shape>

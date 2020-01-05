@@ -4,27 +4,439 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupPage"
-    android:background = "@drawable/background"
-    >
+    tools:context=".SignupPage">
+
+    // background
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:id="@+id/backgroundimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:alpha="1"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/gradientbackground" />
+
+    // logo inside linear layout with height 200dp
+
+    <LinearLayout
+        android:id="@+id/logo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+
+            app:srcCompat="@drawable/appicon" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
 
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="131dp"
-
-        app:srcCompat="@drawable/appicon" />
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.9"
+                    android:background="@color/whiteColor">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="cursive"
+                            android:text="Let's Get Started!"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+
+                            android:textSize="50sp"
+                            android:textStyle="italic|bold" />
+
+                        <androidx.gridlayout.widget.GridLayout
+                            android:id="@+id/formholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:columnCount="1"
+                            app:rowCount="8">
+
+                            // name
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                app:layout_column="0"
+                                app:layout_row="0"
+                                android:orientation="vertical"
+                                >
+                                <EditText
+                                    android:id="@+id/name_edittext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/textinput"
+                                    android:ems="10"
+                                    android:hint="First Name"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                     />
+                                <TextView
+                                    android:id="@+id/name_errormsg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:text="*Must contain Alphabet inputs"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/errorColor"
+                                    android:visibility="invisible"
+                                    />
+
+                            </LinearLayout>
+                            //lastname
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                app:layout_column="0"
+                                app:layout_row="1"
+                                android:orientation="vertical"
+                                >
+                                <EditText
+                                    android:id="@+id/lastname_edittext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/textinput"
+                                    android:ems="10"
+                                    android:hint="Last Name"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                     />
+                                <TextView
+                                    android:id="@+id/lastname_errormsg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:text="*Must contain Alphabet inputs"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/errorColor"
+                                    android:visibility="invisible"
+                                    />
+                            </LinearLayout>
+                            //email
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                app:layout_column="0"
+                                app:layout_row="2"
+                                android:orientation="vertical"
+                                >
+                                <EditText
+                                    android:id="@+id/email_edittext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/textinput"
+                                    android:ems="10"
+                                    android:hint="Email"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                     />
+                                <TextView
+                                    android:id="@+id/email_errormsg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:text="*Must contain Valid email"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/errorColor"
+                                    android:visibility="invisible"
+                                    />
+                            </LinearLayout>
+                            //password
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                app:layout_column="0"
+                                app:layout_row="3"
+                                android:orientation="vertical"
+                                >
+                                <EditText
+                                    android:id="@+id/password_edittext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/textinput"
+                                    android:ems="10"
+                                    android:hint="Password"
+                                    android:inputType="textPassword"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/password_errormsg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:text="* password can't be empty"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/errorColor"
+                                    android:visibility="invisible"
+                                    />
+                            </LinearLayout>
+                            //retrypassword
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                app:layout_column="0"
+                                app:layout_row="4"
+                                android:orientation="vertical"
+                                >
+                                <EditText
+                                    android:id="@+id/retrypassword_edittext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/textinput"
+                                    android:ems="10"
+                                    android:hint="Retry Password"
+                                    android:inputType="textPassword"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    />
+                                <TextView
+                                    android:id="@+id/retrypassword_errormsg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:text="* password must be same as above"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/errorColor"
+                                    android:visibility="invisible"
+                                    />
+                            </LinearLayout>
+                            //phone
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                app:layout_column="0"
+                                app:layout_row="5"
+                                android:orientation="vertical"
+                                >
+                                <EditText
+                                    android:id="@+id/phone_edittext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/textinput"
+                                    android:ems="10"
+                                    android:hint="Phone Number"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                     />
+                                <TextView
+                                    android:id="@+id/phone_errormsg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:text="*Must contain Number inputs!"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/errorColor"
+                                    android:visibility="invisible"
+                                    />
+                            </LinearLayout>
+                            //dob
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal"
+                                app:layout_column="0"
+                                app:layout_row="6">
+
+                                <ImageButton
+                                    android:id="@+id/calender_imagebutton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:scaleType="centerInside"
+                                    app:srcCompat="@drawable/calendar" />
+
+                                <TextView
+                                    android:id="@+id/age_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:textSize="16sp"
+                                    android:gravity="center_vertical"
+                                    android:hint="DOB: Choose from calender"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black" />
+
+                            </LinearLayout>
+                            //gender
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="vertical"
+                                app:layout_column="0"
+                                app:layout_row="7">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gender:"
+                                    android:textColor="@color/black"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RadioGroup
+                                    android:id="@+id/gender_radiogroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp">
+
+                                    <RadioButton
+                                        android:id="@+id/male_radiobutton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:buttonTint="@color/colorPrimaryDark"
+                                        android:text="Male"
+                                        android:textColor="@color/black" />
+
+                                    <RadioButton
+                                        android:id="@+id/female_radiobutton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:buttonTint="@color/colorPrimaryDark"
+                                        android:text="Female"
+                                        android:textColor="@color/black"
+
+                                        />
+
+                                    <RadioButton
+                                        android:id="@+id/unspecified_radiobutton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:buttonTint="@color/colorPrimaryDark"
+                                        android:text="Don't want to specify"
+                                        android:textColor="@color/black" />
+                                </RadioGroup>
+
+                                <TextView
+                                    android:id="@+id/gender_errormsg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:text="* Please choose one of option!"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/errorColor"
+                                    android:visibility="invisible"
+                                    />
+
+                            </LinearLayout>
+
+
+                        </androidx.gridlayout.widget.GridLayout>
+
+                        <Button
+                            android:id="@+id/signup_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_style"
+                            android:text="Sign UP"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/compleform_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="* Please complete the form properly!"
+                            android:textSize="15sp"
+                            android:textColor="@color/errorColor"
+                            android:visibility="invisible"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="10dp"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
