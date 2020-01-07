@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FB8C00</color>
-    <color name="colorPrimaryDark">#EF6C00</color>
-    <color name="colorAccent">#FFD740</color>
+    <color name="colorPrimary">#f07b3f</color>
+    <color name="colorPrimaryDark">#ea5455</color>
+    <color name="colorAccent">#ffd460</color>
+    <color name="colorContrast">#2d4059</color>
+
+    <color name="linkcolor">#0000EE</color>
     <color name="errorColor">#BF360C</color>
     <color name="whiteColor">#ffffff</color>
-    <color name="backgroundColour">#F8BBD0</color>
-    <color name="iconColor">#33691E</color>
     <color name="black">#212121</color>
-    <color name="buttoncolor">#18FFFF</color>
-    <color name="pink">#9C27B0</color>
-    <color name="linkcolor">#01579B</color>
+    <color name="neu_light">#ffffff</color>
+    <color name="neu_dark">#A3B1C6</color>
+    <color name="neu_main">#fae3d9</color>
+
+    <color name="boys_bg_color">#207dff</color>
+    <color name="men_bg_color">#b2dffb</color>
+    <color name="girls_bg_color">#E7A4E4</color>
+    <color name="women_bg_color">#ff00c8</color>
+
+
 </resources>

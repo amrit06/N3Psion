@@ -276,13 +276,13 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
         inputBox.setText("");
         textView.setVisibility(View.VISIBLE);
         textView.setText(errorMsg);
-        inputBox.setBackground(getDrawable(R.drawable.errrorinputbox));
+        inputBox.setBackground(getDrawable(R.drawable.inputbox_error_background));
         inputBox.setHintTextColor(getColor(R.color.errorColor));
     }
 
     private void neutralstate(EditText inputBox,TextView textView){
         textView.setVisibility(View.INVISIBLE);
-        inputBox.setBackground(getDrawable(R.drawable.textinput));
+        inputBox.setBackground(getDrawable(R.drawable.inputbox_background));
         inputBox.setHintTextColor(getColor(R.color.black));
     }
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_drawer_header"
+    android:orientation="vertical"
+    android:gravity="bottom|center_horizontal"
+    android:theme="@style/ThemeOverlay.AppCompat.Light"
+    android:padding="20dp">
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/pic_person"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10"
+        app:civ_shadow_color="#3f51b5"/>
+
+    <TextView
+        android:id="@+id/name_lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amrit Kharel"
+        android:textColor="@color/whiteColor"
+        android:fontFamily="sans-serif"
+        />
+    <TextView
+        android:id="@+id/emailtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="amrit.kharel6@gmail.com"
+        android:textColor="@color/whiteColor"
+        android:fontFamily="sans-serif"
+        />
+    <LinearLayout
+        android:id="@+id/edit_profile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/editprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Edit Profile"
+            android:textColor="@color/linkcolor"
+            android:fontFamily="sans-serif-medium"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_edit"/>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

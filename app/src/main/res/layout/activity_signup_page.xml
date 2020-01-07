@@ -19,7 +19,7 @@
         android:layout_alignParentBottom="true"
         android:alpha="1"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/gradientbackground" />
+        app:srcCompat="@drawable/gradient_background" />
 
     // logo inside linear layout with height 200dp
 
@@ -113,7 +113,7 @@
                                     android:id="@+id/name_edittext"
                                     android:layout_width="match_parent"
                                     android:layout_height="50dp"
-                                    android:background="@drawable/textinput"
+                                    android:background="@drawable/inputbox_background"
                                     android:ems="10"
                                     android:hint="First Name"
                                     android:inputType="textPersonName"
@@ -145,7 +145,7 @@
                                     android:id="@+id/lastname_edittext"
                                     android:layout_width="match_parent"
                                     android:layout_height="50dp"
-                                    android:background="@drawable/textinput"
+                                    android:background="@drawable/inputbox_background"
                                     android:ems="10"
                                     android:hint="Last Name"
                                     android:inputType="textPersonName"
@@ -176,7 +176,7 @@
                                     android:id="@+id/email_edittext"
                                     android:layout_width="match_parent"
                                     android:layout_height="50dp"
-                                    android:background="@drawable/textinput"
+                                    android:background="@drawable/inputbox_background"
                                     android:ems="10"
                                     android:hint="Email"
                                     android:inputType="textPersonName"
@@ -207,7 +207,7 @@
                                     android:id="@+id/password_edittext"
                                     android:layout_width="match_parent"
                                     android:layout_height="50dp"
-                                    android:background="@drawable/textinput"
+                                    android:background="@drawable/inputbox_background"
                                     android:ems="10"
                                     android:hint="Password"
                                     android:inputType="textPassword"
@@ -239,7 +239,7 @@
                                     android:id="@+id/retrypassword_edittext"
                                     android:layout_width="match_parent"
                                     android:layout_height="50dp"
-                                    android:background="@drawable/textinput"
+                                    android:background="@drawable/inputbox_background"
                                     android:ems="10"
                                     android:hint="Retry Password"
                                     android:inputType="textPassword"
@@ -270,7 +270,7 @@
                                     android:id="@+id/phone_edittext"
                                     android:layout_width="match_parent"
                                     android:layout_height="50dp"
-                                    android:background="@drawable/textinput"
+                                    android:background="@drawable/inputbox_background"
                                     android:ems="10"
                                     android:hint="Phone Number"
                                     android:inputType="textPersonName"
@@ -303,7 +303,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:scaleType="centerInside"
-                                    app:srcCompat="@drawable/calendar" />
+                                    app:srcCompat="@drawable/pic_icon_calender" />
 
                                 <TextView
                                     android:id="@+id/age_textview"
@@ -394,9 +394,9 @@
                             android:layout_marginTop="20dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
-                            android:background="@drawable/button_style"
+                            android:background="@drawable/button_background"
                             android:text="Sign UP"
-                            android:textColor="@color/colorPrimaryDark"
+                            android:textColor="@color/colorContrast"
                             android:textSize="30dp"
                             android:textStyle="bold" />
 
