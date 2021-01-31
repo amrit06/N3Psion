@@ -5,10 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".MainActivity"
     >
 
-    <ImageView
+
+   <!-- <ImageView
         android:id="@+id/backgroundimage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,11 +22,10 @@
         android:layout_alignParentTop="true"
         android:scaleType="centerCrop"
         android:alpha="1"
-        />
+        />-->
 
 
-
-        <ImageView
+    <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,11 +42,6 @@
             android:layout_marginBottom="20dp"
 
             />
-
-
-
-
-
 
 
     <TextView
@@ -67,11 +63,6 @@
 
         android:layout_marginBottom="50dp"
          />
-
-
-
-
-
 
 
     <TextView
@@ -255,10 +246,6 @@
             />
 
     </LinearLayout>
-
-
-
-
 
 
 

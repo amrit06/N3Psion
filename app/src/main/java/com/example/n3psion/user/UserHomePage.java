@@ -1,9 +1,8 @@
-package com.example.n3psion;
+package com.example.n3psion.user;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
@@ -13,19 +12,21 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+import com.example.n3psion.MainActivity;
 import com.example.n3psion.Pages.SliderAdapter;
 import com.example.n3psion.Pages.examplefragment;
+import com.example.n3psion.R;
 import com.google.android.material.navigation.NavigationView;
 
 import io.paperdb.Paper;
 
-public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
+public class UserHomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     // for drawer
     private DrawerLayout drawer;
@@ -40,7 +41,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_user_home);
 
 
         // setting up drawer
@@ -48,7 +49,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         androidx.appcompat.widget.Toolbar toolbar = (androidx.appcompat.widget.Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.drawer);
-        ActionBarDrawerToggle toogle = new ActionBarDrawerToggle(HomePage.this, drawer, toolbar, R.string.navigation_open_drawer, R.string.navigation_close_drawer){
+        ActionBarDrawerToggle toogle = new ActionBarDrawerToggle(UserHomePage.this, drawer, toolbar, R.string.navigation_open_drawer, R.string.navigation_close_drawer){
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
                 super.onDrawerSlide(drawerView, slideOffset);
@@ -65,7 +66,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 
 
         NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(HomePage.this);
+        navigationView.setNavigationItemSelectedListener(UserHomePage.this);
         //selecting navigation item when welcome
         if(savedInstanceState == null){ // when our app is rotated is system manages resource it sometimes refresh our oncreate thus reloading page
             // if something is already saved don't override and change their page/fragment
@@ -81,15 +82,13 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         viewSlider = findViewById(R.id.view_pager);
         dotHolder = findViewById(R.id.dot_holder);
 
-        sliderAdapter = new SliderAdapter(HomePage.this);
+        sliderAdapter = new SliderAdapter(UserHomePage.this);
         viewSlider.setAdapter(sliderAdapter);
         addDotForSlider(0);
         viewSlider.addOnPageChangeListener(viewListener);
        }
 
-
-
-       ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
+    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
            @Override
            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -106,12 +105,11 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
            }
        };
 
-
-       public void addDotForSlider(int viewPosition){
+    public void addDotForSlider(int viewPosition){
             dotHolder.removeAllViews();
             contentDots = new TextView[sliderAdapter.getCount()];
             for (int i = 0 ; i< contentDots.length; i++){
-                contentDots[i] = new TextView(HomePage.this);
+                contentDots[i] = new TextView(UserHomePage.this);
                 contentDots[i].setText(Html.fromHtml("&#8226;"));
                 contentDots[i].setTextSize(25);
                 contentDots[i].setTextColor(getColor(R.color.colorAccent));
@@ -128,7 +126,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 
     public void logOut(){
         Paper.book().destroy(); // destroy
-        Intent loginPage = new Intent(HomePage.this, MainActivity.class);
+        Intent loginPage = new Intent(UserHomePage.this, MainActivity.class);
         startActivity(loginPage);
     }
 
@@ -144,5 +142,6 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
 

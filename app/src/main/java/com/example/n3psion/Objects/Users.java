@@ -38,12 +38,9 @@ public class Users {
         this.gender = gender;
     }
 
-
     public void setDob(String DOB){
         this.Dob = DOB;
     }
-
-
 
     public String getUserID() {
         return userID;
@@ -92,4 +89,5 @@ public class Users {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 }

@@ -20,7 +20,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.n3psion.Objects.Users;
+import com.example.n3psion.Objects.Users; // user class
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -146,7 +146,6 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
         datePicker.show();
     }
 
-
     private void registerUser() {
         Boolean noError = true;
 
@@ -160,7 +159,7 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
 
 
         String stringretrypassword = retryPassword.getText().toString();
-        Pattern regex = Pattern.compile("[0-9$&+,:;=\\\\?@#|/'<>.^*()%!-]");
+        Pattern regex = Pattern.compile("[0-9$&+,:;=\\\\?@#|/'<>.^*()%!-]"); // don't include it
 
         // error checking
         {
@@ -242,8 +241,8 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
                     email.setText("");
                     password.setText("");
                     retryPassword.setText("");
-                } else {
 
+                } else {
 
                     String useroneid = dbref.push().getKey();
                     userOne.setUserID(useroneid);
@@ -253,6 +252,7 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
                         public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                             Toast.makeText(SignupPage.this, "account created", Toast.LENGTH_SHORT).show();
                             loadingpage.dismiss();
+                            // once registered go back to main page
                             Intent signupPageIntent = new Intent(SignupPage.this, MainActivity.class);
                             startActivity(signupPageIntent);
                         }
@@ -269,8 +269,6 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
         });
 
     }
-
-
 
     private void displayErrorMSG(EditText inputBox,TextView textView, String errorMsg){
         inputBox.setText("");
